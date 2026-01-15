@@ -50,16 +50,8 @@ A dynamic worksheet creator for Addition, Subtraction, Multiplication, and Divis
 
 **To generate a Vocabulary Worksheet:**
 ```bash
-python vocab_builder.py
 
 To generate a Math Worksheet:
-
-code
-Bash
-download
-content_copy
-expand_less
-python math.py
 
 Follow the on-screen prompts to select difficulty and problem count. The script will generate a file named math_worksheet.html and open it automatically.
 
