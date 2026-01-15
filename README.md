@@ -49,7 +49,6 @@ A dynamic worksheet creator for Addition, Subtraction, Multiplication, and Divis
 ### Usage
 
 **To generate a Vocabulary Worksheet:**
-```bash
 
 To generate a Math Worksheet:
 
