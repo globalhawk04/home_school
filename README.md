@@ -1,6 +1,3 @@
-### **README.md**
-
-```markdown
 # 📚 Homeschool Toolkit
 
 A collection of custom Python scripts and tools designed to generate educational materials, worksheets, and resources for homeschooling.
@@ -18,8 +15,21 @@ A script that helps children practice dictionary skills, reading, and handwritin
     *   Contains a built-in database of **1,000+ words** ranging from easy sight words to complex academic vocabulary.
     *   Randomly selects 10 words every time the script is run.
     *   Generates a clean, printable `.html` file with the words and lined spaces for definitions.
-    *   Automatically opens the worksheet in your default browser for immediate printing.
 *   **Output:** `daily_vocab.html`
+
+### 2. Math Worksheet Generator (`math.py`)
+A dynamic worksheet creator for Addition, Subtraction, Multiplication, and Division.
+
+*   **How it works:**
+    *   Asks the user for the **number of problems** and **difficulty level**.
+    *   **Smart Logic:** Ensures subtraction results are never negative and division results are always whole numbers.
+    *   **Visual Aids:** "Easy" mode automatically generates dot counters (visuals) to help young learners count.
+    *   **Print-Ready:** Creates a two-column layout with a "Name" and "Date" header, optimized for black-and-white printing.
+*   **Difficulty Levels:**
+    *   *Easy:* Numbers 1–10 (with visuals).
+    *   *Medium:* Numbers 10–100.
+    *   *Hard:* Numbers 100–1,000.
+*   **Output:** `math_worksheet.html`
 
 ## 🚀 Getting Started
 
@@ -37,54 +47,53 @@ A script that helps children practice dictionary skills, reading, and handwritin
     ```
 
 ### Usage
-To generate a new Vocabulary Worksheet:
 
+**To generate a Vocabulary Worksheet:**
 ```bash
 python vocab_builder.py
-```
-*The script will generate a file named `daily_vocab.html` in the same directory and attempt to open it automatically.*
 
-## ⚙️ Customization
+To generate a Math Worksheet:
 
-### Modifying the Word Bank
-Open `vocab_builder.py` in any text editor. You will see a large list at the top:
+code
+Bash
+download
+content_copy
+expand_less
+python math.py
 
-```python
+Follow the on-screen prompts to select difficulty and problem count. The script will generate a file named math_worksheet.html and open it automatically.
+
+⚙️ Customization
+Modifying the Vocabulary List
+
+Open vocab_builder.py in any text editor. You will see a large list at the top:
+
+code
+Python
+download
+content_copy
+expand_less
 word_list = [
     "abundant", "adventure", "ancient", ...
 ]
-```
-*   **Add words:** Simply append new strings to the list: `"minecraft", "photosynthesis",`
-*   **Remove words:** Delete any words that are too easy or not relevant.
 
-### Adjusting Print Layout
-If you need more space for writing definitions, look for this section in `vocab_builder.py`:
+Simply add or remove words from this list to tailor it to your child's grade level.
 
-```html
-<!-- Two lines for writing -->
-<div class="definition-lines"></div>
-<div class="definition-lines"></div>
-```
-Copy and paste the `<div class="definition-lines"></div>` line to add more writing space per word.
+Modifying Math Ranges
 
-## 🔮 Future Ideas
-*   Math problem generator (Addition/Subtraction/Multiplication).
-*   Spelling test audio generator.
-*   Reading log tracker.
+Open math.py and look for the generate_problems function. You can manually adjust the number ranges for specific difficulties:
 
-## 📄 License
+code
+Python
+download
+content_copy
+expand_less
+if difficulty == 'medium':
+    num_min, num_max = 10, 100 # Change these numbers to adjust range
+🔮 Future Ideas
+
+Spelling test audio generator.
+Reading log tracker.
+Geography quiz generator.
+
 This project is open source and available for any parent to use!
-```
-
-***
-
-### 💡 Pro Tip: Add a `.gitignore`
-Since the script generates a `.html` file every time you run it, you probably don't want to save that specific HTML file to your GitHub history (since it changes every day).
-
-Create a file named `.gitignore` in your folder and add this line to it:
-
-```text
-*.html
-```
-
-This tells GitHub, "Save my Python code, but ignore the temporary HTML files I generate."
