@@ -60,11 +60,6 @@ Modifying the Vocabulary List
 
 Open vocab_builder.py in any text editor. You will see a large list at the top:
 
-code
-Python
-download
-content_copy
-expand_less
 word_list = [
     "abundant", "adventure", "ancient", ...
 ]
@@ -75,11 +70,6 @@ Modifying Math Ranges
 
 Open math.py and look for the generate_problems function. You can manually adjust the number ranges for specific difficulties:
 
-code
-Python
-download
-content_copy
-expand_less
 if difficulty == 'medium':
     num_min, num_max = 10, 100 # Change these numbers to adjust range
 🔮 Future Ideas
